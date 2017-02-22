@@ -125,7 +125,7 @@ public class BPIngots
 			"textures/blocks/metal/RedAlloy.png",
 			null,
 			0.35, 
-			165,
+			765,
 			EnumTier.TierV,
 			AnvilReq.WROUGHTIRON
 		);
