@@ -1,10 +1,8 @@
-TFC Pewter
+BP Alloy Ingots
 ================
 
 For TFC 0.79.29
 
-This adds Pewter as a new alloy, made of (mostly) tin and (some) copper. 
+Demo mod for TFC metals index showing other mod integration.
 
-You can make Pewter into jugs (which never break and hold more water) or bowls (which never break but have to be washed)
-
-Now on GitHub!
+You can now make blue power red alloy into sheets and trapdoors in case that matters to you for some reason. You can make purple alloy in the crucible.
