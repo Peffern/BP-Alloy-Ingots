@@ -1,0 +1,89 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2/22/17 12:05 AM
+Description: Ticking block entity
+
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at com.peffern.metals.TECustomForge.cookItem(TECustomForge.java:46)
+	at com.bioxx.tfc.TileEntities.TEForge.updateEntity(TEForge.java:418)
+	at net.minecraft.world.World.updateEntities(World.java:2160)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.peffern.metals.TECustomForge.cookItem(TECustomForge.java:46)
+	at com.bioxx.tfc.TileEntities.TEForge.updateEntity(TEForge.java:418)
+
+-- Block entity being ticked --
+Details:
+	Name: TerraForge // com.peffern.metals.TECustomForge
+	Block type: ID #228 (tile.Forge // com.bioxx.tfc.Blocks.Devices.BlockForge)
+	Block data value: 1 / 0x1 / 0b0001
+	Block location: World: (3259,143,-7142), Chunk: (at 11,8,10 in 203,-447; contains blocks 3248,0,-7152 to 3263,255,-7137), Region: (6,-14; contains chunks 192,-448 to 223,-417, blocks 3072,0,-7168 to 3583,255,-6657)
+	Actual block type: ID #228 (tile.Forge // com.bioxx.tfc.Blocks.Devices.BlockForge)
+	Actual block data value: 1 / 0x1 / 0b0001
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2160)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: RA 2
+	All players: 1 total; [EntityPlayerMP['Player237'/115, l='RA 2', x=3259.31, y=144.00, z=-7142.31]]
+	Chunk stats: ServerChunkCache: 694 Drop: 0
+	Level seed: 1255518515837197611
+	Level generator: ID 00 - TFCDefault, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (3260,145,-7144), Chunk: (at 12,9,8 in 203,-447; contains blocks 3248,0,-7152 to 3263,255,-7137), Region: (6,-14; contains chunks 192,-448 to 223,-417, blocks 3072,0,-7168 to 3583,255,-6657)
+	Level time: 633672 game time, 633672 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 66228 (now: false), thunder time: 22743 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.10.5
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 191760200 bytes (182 MB) / 846725120 bytes (807 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 17, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 12 mods loaded, 12 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.4.95} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.4.95-dev.jar) 
+	UCHIJAAAA	tfc_coremod{0.79.29} [TFC[coremod]] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.4.35} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	Waila{1.5.11} [Waila] (Waila-1.5.11-RC2-NONEI_1.7.10.jar) 
+	UCHIJAAAA	tfcmetals{1.1} [TFC Metal Index] (bin) 
+	UCHIJAAAA	qmunitylib{1.0} [QmunityLib] (qmunitylib-1.7.10-0.1.114-universal.jar) 
+	UCHIJAAAA	bluepower{0.2.928} [Blue Power] (BluePower-0.2.928-deobf.jar) 
+	UCHIJAAAA	bpingots{1.0} [BP Ingots] (bin) 
+	UCHIJAAAA	terrafirmacraft{0.79.29} [TerraFirmaCraft] (bin) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player237'/115, l='RA 2', x=3259.31, y=144.00, z=-7142.31]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

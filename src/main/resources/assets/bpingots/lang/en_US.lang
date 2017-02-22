@@ -1,0 +1,23 @@
+﻿#en_US
+#This is the Main language configuration file
+#========
+#= TFCBowls items =
+#========
+item.redAlloyUnshaped.name=Unshaped: Red Alloy
+item.redAlloyIngot2X.name=Red Alloy Double Ingot
+item.redAlloySheet.name=Red Alloy Sheet
+item.redAlloySheet2X.name=Red Alloy Double Sheet
+item.blueAlloyUnshaped.name=Unshaped: Blue Alloy
+item.blueAlloyIngot2X.name=Blue Alloy Double Ingot
+item.blueAlloySheet.name=Blue Alloy Sheet
+item.purpleAlloySheet2X.name=Purple Alloy Double Sheet
+item.purpleAlloyUnshaped.name=Unshaped: Purple Alloy
+item.purpleAlloyIngot2X.name=Purple Alloy Double Ingot
+item.purpleAlloySheet.name=Purple Alloy Sheet
+item.purpleAlloySheet2X.name=Purple Alloy Double Sheet
+#========
+#= TFCBowls GUIs =
+#========
+gui.metal.RedAlloy=Red Alloy
+gui.metal.BlueAlloy=Blue Alloy
+gui.metal.PurpleAlloy=Purple Alloy
