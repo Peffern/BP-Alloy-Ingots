@@ -2,42 +2,22 @@ package com.peffern.bpingots;
 
 
 import com.bioxx.tfc.Core.Metal.Alloy.EnumTier;
-import com.bioxx.tfc.TerraFirmaCraft;
 import com.bioxx.tfc.api.Metal;
-import com.bioxx.tfc.api.TFCFluids;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Constant.Global;
-import com.bioxx.tfc.api.Crafting.AnvilManager;
-import com.bioxx.tfc.api.Crafting.AnvilRecipe;
 import com.bioxx.tfc.api.Crafting.AnvilReq;
-import com.bioxx.tfc.api.Crafting.BarrelManager;
-import com.bioxx.tfc.api.Crafting.BarrelRecipe;
-import com.bioxx.tfc.api.Crafting.PlanRecipe;
-import com.bioxx.tfc.api.Enums.RuleEnum;
 import com.bluepowermod.init.BPItems;
-import com.peffern.metals.BaseMetal;
 import com.peffern.metals.ExpanderMetal;
 import com.peffern.metals.IMetal;
 import com.peffern.metals.Ingredient;
 import com.peffern.metals.MetalData;
 import com.peffern.metals.MetalsRegistry;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidStack;
 
 /**
- * Mod to make pewter a new alloy so you can make better bowls and jugs
+ * Mod to make blue power alloy ingots into proper tfc metals
  * @author peffern
  *
  */
@@ -52,7 +32,7 @@ public class BPIngots
 	public static final String MODNAME = "BP Ingots";
 	
 	/** Mod Version */
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "1.1";
 	
 	/** molten ingot */
 	public static Item redAlloyUnshaped;
@@ -96,7 +76,7 @@ public class BPIngots
 	/** welded sheet */
 	public static Item purpleAlloySheet2X;
 	
-	/** BA metal instance in the registry */
+	/** PA metal instance in the registry */
 	public static Metal PURPLE_ALLOY;
 	
 	
@@ -106,7 +86,7 @@ public class BPIngots
 	{
 		
 
-		
+		//red aloy
 		IMetal metal = new ExpanderMetal
 		(
 			"Red Alloy",
@@ -137,6 +117,7 @@ public class BPIngots
 		redAlloySheet2X = data.sheet2X;
 		RED_ALLOY = data.metal;
 		
+		//blue alloy
 		metal = new ExpanderMetal
 		(
 			"Blue Alloy",
@@ -167,6 +148,7 @@ public class BPIngots
 		blueAlloySheet2X = data.sheet2X;
 		BLUE_ALLOY = data.metal;
 		
+		//purple alloy
 		metal = new ExpanderMetal
 		(
 			"Purple Alloy",

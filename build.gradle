@@ -78,14 +78,6 @@ task sourceJar(type: Jar) {
 
 tasks.build.dependsOn('sourceJar', 'deobfJar')
 
-jar 
-{
-    manifest 
-    {
-        attributes 'FMLCorePlugin': 'com.peffern.pewter.asm.TFCPewterLoadingPlugin', 'FMLCorePluginContainsFMLMod': 'true'
-    }
-} 
-
 dependencies {
      compile fileTree(dir:'libs',include:'*.jar')
 }
